@@ -45,18 +45,19 @@
             label2 = new Label();
             label5 = new Label();
             label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
+            resultenvFee = new Label();
+            resultSubTotal = new Label();
+            resultVATFee = new Label();
             label12 = new Label();
             label13 = new Label();
+            resulttotal = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(23, 26);
+            label1.Location = new Point(23, 28);
             label1.Name = "label1";
             label1.Size = new Size(173, 32);
             label1.TabIndex = 0;
@@ -188,8 +189,9 @@
             // 
             // label2
             // 
+            label2.AccessibleName = "envFee";
             label2.AutoSize = true;
-            label2.Location = new Point(23, 235);
+            label2.Location = new Point(16, 235);
             label2.Name = "label2";
             label2.Size = new Size(54, 15);
             label2.TabIndex = 15;
@@ -197,6 +199,7 @@
             // 
             // label5
             // 
+            label5.AccessibleName = "";
             label5.AutoSize = true;
             label5.Location = new Point(23, 250);
             label5.Name = "label5";
@@ -206,6 +209,7 @@
             // 
             // label8
             // 
+            label8.AccessibleName = "envFee";
             label8.AutoSize = true;
             label8.Location = new Point(23, 265);
             label8.Name = "label8";
@@ -213,39 +217,43 @@
             label8.TabIndex = 17;
             label8.Text = "VATFee:";
             // 
-            // label9
+            // resultenvFee
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(92, 250);
-            label9.Name = "label9";
-            label9.Size = new Size(0, 15);
-            label9.TabIndex = 18;
+            resultenvFee.AccessibleName = "";
+            resultenvFee.AutoSize = true;
+            resultenvFee.Location = new Point(92, 250);
+            resultenvFee.Name = "resultenvFee";
+            resultenvFee.Size = new Size(0, 15);
+            resultenvFee.TabIndex = 18;
             // 
-            // label10
+            // resultSubTotal
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(92, 235);
-            label10.Name = "label10";
-            label10.Size = new Size(0, 15);
-            label10.TabIndex = 19;
+            resultSubTotal.AccessibleName = "";
+            resultSubTotal.AutoSize = true;
+            resultSubTotal.Location = new Point(92, 235);
+            resultSubTotal.Name = "resultSubTotal";
+            resultSubTotal.Size = new Size(0, 15);
+            resultSubTotal.TabIndex = 19;
             // 
-            // label11
+            // resultVATFee
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(92, 265);
-            label11.Name = "label11";
-            label11.Size = new Size(0, 15);
-            label11.TabIndex = 20;
+            resultVATFee.AccessibleName = "";
+            resultVATFee.AutoSize = true;
+            resultVATFee.Location = new Point(92, 265);
+            resultVATFee.Name = "resultVATFee";
+            resultVATFee.Size = new Size(0, 15);
+            resultVATFee.TabIndex = 20;
             // 
             // label12
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.Location = new Point(23, 289);
+            label12.Location = new Point(144, 284);
             label12.Name = "label12";
             label12.Size = new Size(52, 21);
             label12.TabIndex = 21;
             label12.Text = "Total:";
+            label12.Click += label12_Click;
             // 
             // label13
             // 
@@ -256,15 +264,25 @@
             label13.Size = new Size(0, 21);
             label13.TabIndex = 22;
             // 
+            // resulttotal
+            // 
+            resulttotal.AutoSize = true;
+            resulttotal.Location = new Point(197, 287);
+            resulttotal.Name = "resulttotal";
+            resulttotal.Size = new Size(0, 15);
+            resulttotal.TabIndex = 23;
+            resulttotal.Click += label9_Click;
+            // 
             // AddInvoiceUserControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(resulttotal);
             Controls.Add(label13);
             Controls.Add(label12);
-            Controls.Add(label11);
-            Controls.Add(label10);
-            Controls.Add(label9);
+            Controls.Add(resultVATFee);
+            Controls.Add(resultSubTotal);
+            Controls.Add(resultenvFee);
             Controls.Add(label8);
             Controls.Add(label5);
             Controls.Add(label2);
@@ -284,6 +302,7 @@
             Controls.Add(label1);
             Name = "AddInvoiceUserControl";
             Size = new Size(400, 340);
+            Load += SubTotal_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -307,10 +326,11 @@
         private Label label2;
         private Label label5;
         private Label label8;
-        private Label label9;
-        private Label label10;
-        private Label label11;
+        private Label resultenvFee;
+        private Label resultSubTotal;
+        private Label resultVATFee;
         private Label label12;
         private Label label13;
+        private Label resulttotal;
     }
 }

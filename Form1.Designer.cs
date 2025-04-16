@@ -36,6 +36,7 @@
             AddInvoiceMenuButton = new Button();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             addInvoiceUserControl = new AddInvoiceUserControl();
+            managenvoiceUserControl = new ManagenvoiceUserControl();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -83,6 +84,7 @@
             ManageInvocesMenuButton.TabIndex = 2;
             ManageInvocesMenuButton.Text = "Manage Invoices";
             ManageInvocesMenuButton.UseVisualStyleBackColor = true;
+            ManageInvocesMenuButton.Click += ManageInvocesMenuButton_Click;
             // 
             // AddInvoiceMenuButton
             // 
@@ -96,10 +98,17 @@
             // 
             // addInvoiceUserControl
             // 
-            addInvoiceUserControl.Location = new Point(205, 0);
+            addInvoiceUserControl.Location = new Point(198, 0);
             addInvoiceUserControl.Name = "addInvoiceUserControl";
-            addInvoiceUserControl.Size = new Size(579, 494);
+            addInvoiceUserControl.Size = new Size(648, 508);
             addInvoiceUserControl.TabIndex = 1;
+            // 
+            // managenvoiceUserControl
+            // 
+            managenvoiceUserControl.Location = new Point(188, 3);
+            managenvoiceUserControl.Name = "managenvoiceUserControl";
+            managenvoiceUserControl.Size = new Size(604, 545);
+            managenvoiceUserControl.TabIndex = 2;
             // 
             // Form1
             // 
@@ -107,7 +116,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(776, 491);
+            ClientSize = new Size(814, 475);
+            Controls.Add(managenvoiceUserControl);
             Controls.Add(addInvoiceUserControl);
             Controls.Add(panel1);
             Name = "Form1";
@@ -127,5 +137,7 @@
         private PictureBox pictureBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private AddInvoiceUserControl addInvoiceUserControl;
+        private ManagenvoiceUserControl managenvoiceUserControl1;
+        private ManagenvoiceUserControl managenvoiceUserControl;
     }
 }

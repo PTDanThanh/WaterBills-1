@@ -8,26 +8,26 @@ namespace Water_Bills
 {
     public class Invoice
     {
-        protected string customerId { get; set; }
-        protected string customerName { get; set; }
-        protected string InvoiceId { get; set; }
-        protected DateTime createdAt { get; set; }
-        protected int thisMonthNumber { get; set; }
-        protected int lastMonthNumber { get; set; }
-        protected string typeOfCustomer { get; set; }   
-        protected string numberOfPeople { get; set; }
-        protected int amountConsumption { get; set; }
-        protected double price { get; set; }
-        protected double envFee { get; set; }   
-        protected double VATFee { get; set; }   
-        protected double subTotal { get; set; }
-        protected double total { get; set; }
+        public string customerId { get; set; }
+        public string customerName { get; set; }
+        public string InvoiceId { get; set; }
+        public DateTime createdAt { get; set; }
+        public int thisMonthNumber { get; set; }
+        public int lastMonthNumber { get; set; }
+        public string typeOfCustomer { get; set; }
+        public int numberOfPeople { get; set; }
+        public int amountConsumption { get; set; }
+        public double price { get; set; }
+        public double envFee { get; set; }
+        public double VATFee { get; set; }
+        public double subTotal { get; set; }
+        public double total { get; set; }
 
         public Invoice()
         {
             this.customerId = string.Empty;
             this.customerName = string.Empty;
-            this.InvoiceId = 0;
+            this.InvoiceId = string.Empty;
             this.createdAt = DateTime.Now;
             this.thisMonthNumber = 0;
             this.lastMonthNumber = 0;
